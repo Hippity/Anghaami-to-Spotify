@@ -1,21 +1,19 @@
 from selenium import webdriver
-from selenium.common.exceptions import NoSuchElementException
-from selenium.common.exceptions import ElementClickInterceptedException
 from time import sleep
 from selenium.webdriver.common.keys import Keys 
 from pyautogui import write
 from pyautogui import click as clic
 import os.path
 
-driver=webdriver.Chrome(executable_path='C:\\Users\Zein Zebib\Documents\Python Stuff\Online Automation\chromedriver.exe')
+driver=webdriver.Chrome(executable_path=##########Enter chromedriver path)
 driver.get('https://open.spotify.com/')
 name=input('Enter File Name: ')
 driver.find_element_by_xpath('//*[@id="main"]/div/div[2]/div[1]/header/div[4]/button[2]').click()
 
 ## Email and Pass
 sleep(10)
-driver.find_element_by_xpath('//*[@id="login-username"]').send_keys('zebib.zein@gmail.com')
-driver.find_element_by_xpath('//*[@id="login-password"]').send_keys('Zeenoo12'+Keys.ENTER)
+driver.find_element_by_xpath('//*[@id="login-username"]').send_keys(######Enter Mail)
+driver.find_element_by_xpath('//*[@id="login-password"]').send_keys(######Enter Pass       +Keys.ENTER)
 
 
 ## Creating the Playlist
