@@ -4,14 +4,14 @@ from selenium.common.exceptions import ElementClickInterceptedException
 from time import sleep
 import os.path
 
-driver=webdriver.Chrome(executable_path='C:\\Users\Zein Zebib\Documents\Python Stuff\Online Automation\chromedriver.exe')
+driver=webdriver.Chrome(executable_path=########Enter your chromedrive path)
 driver.get('https://play.anghami.com/login')
 
 p=int(input('Enter the number of playlists: '))
 
 
 ##### Path to save files
-path='C:\\Users\Zein Zebib\Desktop\Anghami'
+path= #########Enter your path to save the files location (Better to put it next to Spotify.py)
 
 
 #### Function to extract x number of playlists and put them into separate files
@@ -58,14 +58,14 @@ driver.find_element_by_xpath('//*[@id="ang_app"]/anghami-login-page/div/anghami-
 
 ## Mail
 
-driver.find_element_by_xpath('//*[@id="ang_app"]/anghami-login-page/div/anghami-main-login/div/anghami-more-ways-login/div/div/form/span/input').send_keys('zebib.zein@gmail.com')
+driver.find_element_by_xpath('//*[@id="ang_app"]/anghami-login-page/div/anghami-main-login/div/anghami-more-ways-login/div/div/form/span/input').send_keys(######Enter Mail)
 
 driver.find_element_by_xpath('//*[@id="ang_app"]/anghami-login-page/div/anghami-main-login/div/anghami-more-ways-login/div/div/form/button').click()
 
 ## Pass
 sleep(5)
 
-driver.find_element_by_xpath('//*[@id="ang_app"]/anghami-login-page/div/anghami-main-login/div/anghami-fill-email-password/div/div/form/span[2]/input').send_keys('Zeenoo12')
+driver.find_element_by_xpath('//*[@id="ang_app"]/anghami-login-page/div/anghami-main-login/div/anghami-fill-email-password/div/div/form/span[2]/input').send_keys(#####Enter Password)
 
 driver.find_element_by_xpath('//*[@id="ang_app"]/anghami-login-page/div/anghami-main-login/div/anghami-fill-email-password/div/div/form/button').click()
 
